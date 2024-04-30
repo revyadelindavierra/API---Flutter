@@ -18,7 +18,7 @@ class _MovielistState extends State<Movielist> {
   void initState() {
     super.initState();
     _service = HttpService();
-    _moviesFuture = _service.getPopularMovies();
+    _moviesFuture = _service.getPopularMovies(); // untuk ngisi ini
   }
 
   @override
@@ -31,7 +31,7 @@ class _MovielistState extends State<Movielist> {
             style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
           ),
         ),
-        backgroundColor: const Color.fromARGB(137, 72, 57, 57),
+        backgroundColor: Color.fromARGB(136, 183, 182, 182),
         actions: [
           IconButton(
             onPressed: () {},
@@ -40,7 +40,7 @@ class _MovielistState extends State<Movielist> {
           ),
         ],
       ),
-      backgroundColor: Color(0xFF232227),
+      backgroundColor: Color.fromARGB(255, 137, 136, 141),
       body: FutureBuilder<List<Movie>>(
           future: _moviesFuture,
           builder: (context, snapshot) {
